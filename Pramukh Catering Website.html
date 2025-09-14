@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pramukh Catering - 17 Years of Culinary Art</title>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts for an elegant look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Define custom fonts and animations */
+        body {
+            font-family: 'Lora', serif;
+            scroll-behavior: smooth;
+            background-color: #111827; /* Darker background */
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        /* Fade-in animation for page transitions */
+        .page {
+            display: none; /* Hide all pages by default */
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Styling for the menu item cards */
+        .menu-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #374151; /* Subtle border */
+        }
+        .menu-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 25px rgba(251, 191, 36, 0.1);
+            border-color: #fbbf24;
+        }
+        .menu-card img {
+            transition: transform 0.4s ease;
+        }
+        .menu-card:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Main Container -->
+    <div class="container mx-auto p-4 md:p-8">
+
+        <!-- Header: Restaurant Name -->
+        <header class="text-center mb-8">
+            <h1 class="text-4xl md:text-6xl text-amber-400">The Chef's Palette</h1>
+            <p class="text-gray-300">An Authentic Indian Culinary Journey</p>
+        </header>
+
+        <main>
+            <!-- Page 1: Home Section -->
+            <section id="home" class="page text-center">
+                <div class="bg-gray-800 rounded-lg shadow-xl p-8 md:p-12">
+                    <h2 class="text-3xl md:text-4xl mb-4 text-amber-300">17 Years of Culinary Excellence</h2>
+                    <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                        Welcome to a place where tradition meets innovation. Our head chef, with over 17 years of experience honing their craft in kitchens around the world, brings you an unforgettable dining experience. Every dish is a masterpiece, crafted with passion, precision, and the finest ingredients.
+                    </p>
+                    <button onclick="showPage('menu')" class="bg-amber-500 text-gray-900 font-bold py-3 px-8 rounded-lg text-lg hover:bg-amber-400 transition duration-300 shadow-lg">
+                        Explore Our Menu
+                    </button>
+                </div>
+            </section>
+
+            <!-- Page 2: Menu Section -->
+            <section id="menu" class="page">
+                <div class="text-center mb-10">
+                    <h2 class="text-4xl md:text-5xl text-amber-300">Our Menu</h2>
+                    <p class="text-gray-400">A Symphony of Flavors</p>
+                </div>
+                
+                <!-- Menu Grid -->
+                <div>
+                    <!-- Section: Veg Appetizers -->
+                    <h3 class="text-3xl text-amber-400 border-b-2 border-amber-500/50 pb-2 mb-8">Veg Appetizers</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                        <div class="menu-card bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+                            <img src="https://placehold.co/600x400/1a202c/fbbf24?text=Veg+Samosa" alt="Veg Samosa" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2">Veg Samosa (2pcs)</h4>
+                                <p class="text-gray-400 text-sm mb-4">Crispy fried turnover, filled with potatoes, green peas and spices</p>
+                                <p class="text-lg text-amber-400 font-semibold">$5.99</p>
+                            </div>
+                        </div>
+                        <div class="menu-card bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+                            <img src="https://placehold.co/600x400/1a202c/fbbf24?text=Mix+Veg+Pakora" alt="Mix Veg Pakora" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2">Mix Veg Pakora</h4>
+                                <p class="text-gray-400 text-sm mb-4">Assorted vegetables dipped in spiced chickpea flour and deep fried.</p>
+                                <p class="text-lg text-amber-400 font-semibold">$8.99</p>
+                            </div>
+                        </div>
+                         <div class="menu-card bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+                            <img src="https://placehold.co/600x400/1a202c/fbbf24?text=Paneer+Pakora" alt="Paneer Pakora" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2">Paneer Pakora</h4>
+                                <p class="text-gray-400 text-sm mb-4">Indian cheese dipped in spiced chickpea flour and deep fried.</p>
+                                <p class="text-lg text-amber-400 font-semibold">$9.99</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section: Non-Veg Appetizers -->
+                    <h3 class="text-3xl text-amber-400 border-b-2 border-amber-500/50 pb-2 mb-8">Non-Veg Appetizers</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                        <div class="menu-card bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+                            <img src="https://placehold.co/600x400/1a202c/fbbf24?text=Chicken+65" alt="Chicken 65" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2">Chicken 65</h4>
+                                <p class="text-gray-400 text-sm mb-4">Chicken marinated with spices and deep fried.</p>
+                                <p class="text-lg text-amber-400 font-semibold">$12.99</p>
+                            </div>
+                        </div>
+                        <div class="menu-card bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+                            <img src="https://placehold.co/600x400/1a202c/fbbf24?text=Tandoori+Chicken" alt="Tandoori Chicken" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2">Tandoori Chicken</h4>
+                                <p class="text-gray-400 text-sm mb-4">Chicken marinated in yogurt, ginger, garlic, spices and roasted in tandoor</p>
+                                <p class="text-lg text-amber-400 font-semibold">Half: $14.99 | Full: $24.99</p>
+                            </div>
+                        </div>
+                        <div class="menu-card bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+                            <img src="https://placehold.co/600x400/1a202c/fbbf24?text=Chicken+Tikka" alt="Chicken Tikka" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2">Chicken Tikka</h4>
+                                <p class="text-gray-400 text-sm mb-4">Boneless chicken marinated with yogurt and spices, roasted in tandoor</p>
+                                <p class="text-lg text-amber-400 font-semibold">$14.99</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section: Veg Main Course -->
+                    <h3 class="text-3xl text-amber-400 border-b-2 border-amber-500/50 pb-2 mb-8">Veg Main Course</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                         <div class="menu-card bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+                            <img src="https://placehold.co/600x400/1a202c/fbbf24?text=Shahi+Paneer" alt="Shahi Paneer" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2">Shahi Paneer</h4>
+                                <p class="text-gray-400 text-sm mb-4">Cottage cheese cooked in onion, cashew nuts and cream sauce</p>
+                                <p class="text-lg text-amber-400 font-semibold">$15.99</p>
+                            </div>
+                        </div>
+                        <div class="menu-card bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+                            <img src="https://placehold.co/600x400/1a202c/fbbf24?text=Dal+Makhani" alt="Dal Makhani" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2">Dal Makhani</h4>
+                                <p class="text-gray-400 text-sm mb-4">Black lentils and kidney beans cooked with butter and cream</p>
+                                <p class="text-lg text-amber-400 font-semibold">$14.99</p>
+                            </div>
+                        </div>
+                        <div class="menu-card bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+                            <img src="https://placehold.co/600x400/1a202c/fbbf24?text=Chana+Masala" alt="Chana Masala" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2">Chana Masala</h4>
+                                <p class="text-gray-400 text-sm mb-4">Chickpeas cooked in onion and tomato gravy</p>
+                                <p class="text-lg text-amber-400 font-semibold">$13.99</p>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- Section: Chicken Main Course -->
+                    <h3 class="text-3xl text-amber-400 border-b-2 border-amber-500/50 pb-2 mb-8">Chicken Main Course</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                         <div class="menu-card bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+                            <img src="https://placehold.co/600x400/1a202c/fbbf24?text=Butter+Chicken" alt="Butter Chicken" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2">Butter Chicken</h4>
+                                <p class="text-gray-400 text-sm mb-4">Chicken tikka cooked in a creamy tomato sauce</p>
+                                <p class="text-lg text-amber-400 font-semibold">$16.99</p>
+                            </div>
+                        </div>
+                        <div class="menu-card bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+                            <img src="https://placehold.co/600x400/1a202c/fbbf24?text=Chicken+Curry" alt="Chicken Curry" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2">Chicken Curry</h4>
+                                <p class="text-gray-400 text-sm mb-4">Boneless chicken cooked with onion and tomato-based sauce</p>
+                                <p class="text-lg text-amber-400 font-semibold">$15.99</p>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- Section: Goat & Lamb -->
+                    <h3 class="text-3xl text-amber-400 border-b-2 border-amber-500/50 pb-2 mb-8">Goat & Lamb Main Course</h3>
+                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                         <div class="menu-card bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+                            <img src="https://placehold.co/600x400/1a202c/fbbf24?text=Goat+Curry" alt="Goat Curry" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2">Goat Curry</h4>
+                                <p class="text-gray-400 text-sm mb-4">Goat meat with bones cooked in onion and tomato-based sauce</p>
+                                <p class="text-lg text-amber-400 font-semibold">$17.99</p>
+                            </div>
+                        </div>
+                         <div class="menu-card bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+                            <img src="https://placehold.co/600x400/1a202c/fbbf24?text=Lamb+Curry" alt="Lamb Curry" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2">Lamb Curry</h4>
+                                <p class="text-gray-400 text-sm mb-4">Boneless lamb cooked with onion and tomato-based sauce</p>
+                                <p class="text-lg text-amber-400 font-semibold">$17.99</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section: Breads -->
+                    <h3 class="text-3xl text-amber-400 border-b-2 border-amber-500/50 pb-2 mb-8">Breads</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                         <div class="menu-card bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+                            <img src="https://placehold.co/600x400/1a202c/fbbf24?text=Tandoori+Roti" alt="Tandoori Roti" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2">Tandoori Roti</h4>
+                                <p class="text-gray-400 text-sm mb-4">Whole wheat bread baked in tandoor</p>
+                                <p class="text-lg text-amber-400 font-semibold">$2.99</p>
+                            </div>
+                        </div>
+                        <div class="menu-card bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+                            <img src="https://placehold.co/600x400/1a202c/fbbf24?text=Naan" alt="Naan" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2">Naan</h4>
+                                <p class="text-gray-400 text-sm mb-4">Leavened bread of fine white flour baked in tandoor</p>
+                                <p class="text-lg text-amber-400 font-semibold">$2.99</p>
+                            </div>
+                        </div>
+                        <div class="menu-card bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+                            <img src="https://placehold.co/600x400/1a202c/fbbf24?text=Garlic+Naan" alt="Garlic Naan" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2">Garlic Naan</h4>
+                                <p class="text-gray-400 text-sm mb-4">Naan topped with garlic and cilantro</p>
+                                <p class="text-lg text-amber-400 font-semibold">$3.99</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                     <button onclick="showPage('home')" class="text-amber-400 hover:text-white transition duration-300 flex items-center gap-2 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                        Return Home
+                    </button>
+                </div>
+            </section>
+
+            <!-- Page 3: Contact Section -->
+            <section id="contact" class="page">
+                 <div class="bg-gray-800 rounded-lg shadow-xl p-8 md:p-12 text-center">
+                    <h2 class="text-4xl md:text-5xl text-amber-300 mb-8">Contact Us</h2>
+                    
+                    <div class="max-w-md mx-auto">
+                        <!-- Hours of Operation -->
+                        <div class="mb-8">
+                            <h3 class="text-2xl text-amber-400 mb-2">Hours of Operation</h3>
+                            <p class="text-gray-300">Monday - Friday: 11:00 AM - 10:00 PM</p>
+                            <p class="text-gray-300">Saturday - Sunday: 12:00 PM - 11:00 PM</p>
+                        </div>
+
+                        <!-- WhatsApp Button -->
+                        <div class="mb-8">
+                            <h3 class="text-2xl text-amber-400 mb-3">Order or Inquire</h3>
+                            <a href="https://wa.me/1234567890?text=Hello!%20I'd%20like%20to%20inquire%20about%20your%20menu." target="_blank" class="inline-flex items-center gap-3 bg-green-500 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-400 transition duration-300 shadow-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M16.6,14.2l-1.5-0.8c-0.4-0.2-1-0.1-1.4,0.3l-1.1,1.3c-1.6-0.8-3-2.1-3.8-3.7l1.3-1.1c0.4-0.4,0.5-1,0.3-1.4l-0.8-1.5 c-0.2-0.5-0.7-0.8-1.3-0.8H5.1c-0.6,0-1.2,0.5-1.1,1.2c0.2,2.3,1.2,4.5,2.7,6.3c1.9,2.1,4.4,3.6,7.2,4.2c0.2,0,0.4,0.1,0.5,0.1 c0.5,0,1-0.3,1.2-0.8l0.2-1.1C17.4,14.9,17.1,14.4,16.6,14.2z M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10c5.5,0,10-4.5,10-10S17.5,2,12,2z M12,20.5c-4.7,0-8.5-3.8-8.5-8.5S7.3,3.5,12,3.5s8.5,3.8,8.5,8.5S16.7,20.5,12,20.5z"></path></svg>
+                                Chat on WhatsApp
+                            </a>
+                            <p class="text-xs text-gray-500 mt-2">Clicking opens WhatsApp directly!</p>
+                        </div>
+                    </div>
+                     <button onclick="showPage('home')" class="text-amber-400 hover:text-white transition duration-300 flex items-center gap-2 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                        Return Home
+                    </button>
+                 </div>
+            </section>
+        </main>
+        
+        <!-- Footer Navigation -->
+        <footer class="mt-12 border-t border-gray-700 pt-6">
+            <nav class="flex justify-center items-center space-x-6">
+                <button onclick="showPage('home')" class="text-gray-400 hover:text-amber-400 transition">Home</button>
+                <button onclick="showPage('menu')" class="text-gray-400 hover:text-amber-400 transition">Menu</button>
+                <button onclick="showPage('contact')" class="text-gray-400 hover:text-amber-400 transition">Contact</button>
+            </nav>
+            <p class="text-center text-gray-600 text-sm mt-4">&copy; 2025 The Chef's Palette. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // JavaScript to control page visibility
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.style.display = 'none';
+            });
+
+            // Show the requested page
+            const activePage = document.getElementById(pageId);
+            if (activePage) {
+                activePage.style.display = 'block';
+            }
+        }
+
+        // Show the home page by default when the site loads
+        document.addEventListener('DOMContentLoaded', () => {
+            showPage('home');
+        });
+    </script>
+
+</body>
+</html>
+
